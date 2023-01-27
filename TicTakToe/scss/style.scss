@@ -21,15 +21,16 @@ body{
 		display: flex;
 		flex-direction: column;
 		border-radius: 10px;
-		background: #C0392B;
+		background: #8943ac;
 		@media(max-width:720px){
 			width: 95%;
-			height: 550px;
+			height: 600px;
 		}
 		.text_block{
 			height: 150px;
 			width: 100%;
 			//border: 1px solid #0b33ff;
+			border-bottom: 2px solid #1b2a79;
 			display: flex;
 			justify-content: space-around;
 			flex-direction: column;
@@ -38,12 +39,13 @@ body{
 			h1{
 				font-size: 30px;
 				text-align: center;
-				color: whitesmoke;
+				color: #ffb808;
 			}
-			p{
+			#text_message{
 				font-size: 20px;
 				text-transform: uppercase;
-				color: whitesmoke;
+				color: #a9ff00;
+				transition: 0.3s all;
 			}
 			.restart_button{
 				width: 200px;
@@ -60,32 +62,85 @@ body{
 					color: white;
 				}
 				&:active{
-					width: 200px;
+					width: 230px;
+					background: #ff1616;
 				}
 			}
 		}
 		.play_block{
+			position: relative;
 			flex-grow: 1;
 			//border: 2px solid yellow;
 			display: flex;
 			flex-wrap: wrap;
+			&:before{
+				content: '';
+				position: absolute;
+				width: 90%;
+				height: 3%;
+				top: 33.5%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				border-radius: 50%;
+				background: orange;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				width: 90%;
+				height: 3%;
+				top: 66.6%;
+				left: 50%;
+				transform: translate(-50%,-50%);
+				border-radius: 50%;
+				background: orange;
+			}
+			.border_1{
+				position: absolute;
+				width: 3%;
+				height: 90%;
+				top: 50%;
+				left: 33.4%;
+				transform: translate(-50%,-50%);
+				border-radius: 50%;
+				background: orange;
+			}
+			.border_2{
+				position: absolute;
+				width: 3%;
+				height: 90%;
+				top: 50%;
+				left: 66.7%;
+				transform: translate(-50%,-50%);
+				border-radius: 50%;
+				background: orange;
+			}
 			.plates{
 				position: relative;
-				border: 2px solid orange;
-				flex-basis: 32%;
+				//border: 2px solid orange;
+				flex-basis: 26%;
 				flex-grow: 1;
-				margin: 2px;
-				border-radius: 5px;
+				margin: 20px;
+				border-radius: 30%;
 				display: flex;
 				justify-content: center;
 				align-items: center;
 				transition: 0.2s all;
-				
+				@media (max-width: 330px) {
+					flex-basis: 33%;
+					margin: 0px;
+				}
+				@media (max-width: 600px) {
+					flex-basis: 26%;
+					margin: 10px;
+				}
 				&:hover{
 					background: orange;
+					
 				}
 				&:active{
 					background: red;
+					
 				}
 				p{
 					position: absolute;
@@ -94,6 +149,10 @@ body{
 					font-size: 100px;
 					transform: translate(-50%,-50%);
 					text-align: center;
+					transition: 0.2s all;
+					&:active{
+						font-size: 120px;
+					}
 				}
 			}
 		}
