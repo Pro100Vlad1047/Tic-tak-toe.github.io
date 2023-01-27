@@ -24,7 +24,7 @@ let winnerPositions=[
 function playerTurn(e){
 	if(e.textContent==""&& gameStarter==0){
 		if(turn%2==0){
-		e.insertAdjacentHTML("afterbegin",`<p style="color:red";>X</p>`);
+		e.insertAdjacentHTML("afterbegin",`<p style="color:red;";>X</p>`);
 		posOne=e.getAttribute("id");
 		posOneArr.push(posOne);
 		checkEquals(posOneArr);
@@ -89,9 +89,29 @@ function restartGame(){
 		document.getElementById(i).innerHTML="";
 	}
 	document.querySelector("#text_message").innerHTML="Let`s go to play!";
+	document.querySelector(".border_1").classList.remove("red");
+	document.querySelector(".border_2").classList.remove("red");
+	document.querySelector(".border_3").classList.remove("red");
+	document.querySelector(".border_4").classList.remove("red");
+	document.querySelector(".border_1").classList.remove("white");
+	document.querySelector(".border_2").classList.remove("white");
+	document.querySelector(".border_3").classList.remove("white");
+	document.querySelector(".border_4").classList.remove("white");
 }
 
 function rainbowing(){
+	if(turn%2==0){
+			console.log("fff");
+			document.querySelector(".border_1").classList.add("red");
+			document.querySelector(".border_2").classList.add("red");
+			document.querySelector(".border_3").classList.add("red");
+			document.querySelector(".border_4").classList.add("red");
+		}else{
+			document.querySelector(".border_1").classList.add("white");
+			document.querySelector(".border_2").classList.add("white");
+			document.querySelector(".border_3").classList.add("white");
+			document.querySelector(".border_4").classList.add("white");
+		}
 		rainbow=setInterval(function(){
 		if(document.querySelector("#text_message").style.color=="red"){
 			document.querySelector("#text_message").style.color="yellow";
