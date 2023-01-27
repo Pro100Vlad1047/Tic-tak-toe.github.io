@@ -1,0 +1,210 @@
+@charset "UTF-8";
+/*Обнуление*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+body {
+  font-family: "Open Sans", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  background: lightblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: rgb(252, 70, 70);
+  background: radial-gradient(circle, rgb(252, 70, 70) 27%, rgb(63, 94, 251) 100%);
+}
+.wrapper .main_block {
+  width: 700px;
+  height: 700px;
+  border: 2px solid #1b2a79;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 10px;
+  background: #C0392B;
+}
+@media (max-width: 720px) {
+  .wrapper .main_block {
+    width: 95%;
+    height: 550px;
+  }
+}
+.wrapper .main_block .text_block {
+  height: 150px;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 20px;
+}
+.wrapper .main_block .text_block h1 {
+  font-size: 30px;
+  text-align: center;
+  color: whitesmoke;
+}
+.wrapper .main_block .text_block p {
+  font-size: 20px;
+  text-transform: uppercase;
+  color: whitesmoke;
+}
+.wrapper .main_block .text_block .restart_button {
+  width: 200px;
+  height: 30px;
+  border: 1px solid #fe4040;
+  border-radius: 20px;
+  background: none;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: whitesmoke;
+}
+.wrapper .main_block .text_block .restart_button:hover {
+  background: #fe4040;
+  color: white;
+}
+.wrapper .main_block .text_block .restart_button:active {
+  width: 200px;
+}
+.wrapper .main_block .play_block {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.wrapper .main_block .play_block .plates {
+  position: relative;
+  border: 2px solid orange;
+  -ms-flex-preferred-size: 32%;
+      flex-basis: 32%;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  margin: 2px;
+  border-radius: 5px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: 0.2s all;
+  transition: 0.2s all;
+}
+.wrapper .main_block .play_block .plates:hover {
+  background: orange;
+}
+.wrapper .main_block .play_block .plates:active {
+  background: red;
+}
+.wrapper .main_block .play_block .plates p {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  font-size: 100px;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}

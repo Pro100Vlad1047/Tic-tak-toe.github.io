@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tic-Tak-Toe</title>
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+	<div class="wrapper">
+		<div class="main_block">
+			<div class="text_block">
+				<h1>Tic-Tak-Toe</h1>
+				<p id="text_message">Let`s go to play!</p>
+				<button onclick="restartGame()" class="restart_button">Restart the Game!!!</button>
+			</div>
+			<div class="play_block">
+				<div class="plates" id="1" onclick="playerTurn(this)"></div>
+				<div class="plates" id="2" onclick="playerTurn(this)"></div>
+				<div class="plates" id="3" onclick="playerTurn(this)"></div>
+				<div class="plates" id="4" onclick="playerTurn(this)"></div>
+				<div class="plates" id="5" onclick="playerTurn(this)"></div>
+				<div class="plates" id="6" onclick="playerTurn(this)"></div>
+				<div class="plates" id="7" onclick="playerTurn(this)"></div>
+				<div class="plates" id="8" onclick="playerTurn(this)"></div>
+				<div class="plates" id="9" onclick="playerTurn(this)"></div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="../JS/api.js"></script>
+</body>
+</html>

@@ -1,0 +1,101 @@
+@import 'null.scss';
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,300;1,400;1,500;1,700;1,900&display=swap');
+body{
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
+}
+
+.wrapper{
+	width: 100%;
+	height: 100vh;
+	background: lightblue;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: rgb(252,70,70);
+	background: radial-gradient(circle, rgba(252,70,70,1) 27%, rgba(63,94,251,1) 100%);
+	.main_block{
+		width: 700px;
+		height: 700px;
+		border: 2px solid #1b2a79;
+		display: flex;
+		flex-direction: column;
+		border-radius: 10px;
+		background: #C0392B;
+		@media(max-width:720px){
+			width: 95%;
+			height: 550px;
+		}
+		.text_block{
+			height: 150px;
+			width: 100%;
+			//border: 1px solid #0b33ff;
+			display: flex;
+			justify-content: space-around;
+			flex-direction: column;
+			align-items:center ;
+			border-radius: 20px;
+			h1{
+				font-size: 30px;
+				text-align: center;
+				color: whitesmoke;
+			}
+			p{
+				font-size: 20px;
+				text-transform: uppercase;
+				color: whitesmoke;
+			}
+			.restart_button{
+				width: 200px;
+				height: 30px;
+				border: 1px solid #fe4040;
+				border-radius: 20px;
+				background: none;
+				transition: 0.2s all;
+				text-transform: uppercase;
+				font-size: 14px;
+				color: whitesmoke;
+				&:hover{
+					background: #fe4040;
+					color: white;
+				}
+				&:active{
+					width: 200px;
+				}
+			}
+		}
+		.play_block{
+			flex-grow: 1;
+			//border: 2px solid yellow;
+			display: flex;
+			flex-wrap: wrap;
+			.plates{
+				position: relative;
+				border: 2px solid orange;
+				flex-basis: 32%;
+				flex-grow: 1;
+				margin: 2px;
+				border-radius: 5px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				transition: 0.2s all;
+				
+				&:hover{
+					background: orange;
+				}
+				&:active{
+					background: red;
+				}
+				p{
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					font-size: 100px;
+					transform: translate(-50%,-50%);
+					text-align: center;
+				}
+			}
+		}
+	}
+}
