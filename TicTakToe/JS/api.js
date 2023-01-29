@@ -53,6 +53,10 @@ function checkEquals(posArrays){
 	}
 	else if(turn==8){
 		document.querySelector("#text_message").innerHTML="The match ended in a draw!!!";
+		document.querySelector(".border_1").classList.add("green");
+		document.querySelector(".border_2").classList.add("green");
+		document.querySelector(".border_3").classList.add("green");
+		document.querySelector(".border_4").classList.add("green");
 	}
 }
 
@@ -85,6 +89,7 @@ function restartGame(){
 	gameWinner=0;
 	clearInterval(rainbow);
 	document.querySelector("#text_message").style.color="#a9ff00";
+	document.querySelector("#text_message").style.transform="scale(1)";
 	for(let i=1;i<10;++i){
 		document.getElementById(i).innerHTML="";
 	}
@@ -97,6 +102,10 @@ function restartGame(){
 	document.querySelector(".border_2").classList.remove("white");
 	document.querySelector(".border_3").classList.remove("white");
 	document.querySelector(".border_4").classList.remove("white");
+	document.querySelector(".border_1").classList.remove("green");
+	document.querySelector(".border_2").classList.remove("green");
+	document.querySelector(".border_3").classList.remove("green");
+	document.querySelector(".border_4").classList.remove("green");
 }
 
 function rainbowing(){
@@ -115,10 +124,13 @@ function rainbowing(){
 		rainbow=setInterval(function(){
 		if(document.querySelector("#text_message").style.color=="red"){
 			document.querySelector("#text_message").style.color="yellow";
+			document.querySelector("#text_message").style.transform="scale(1)";
 		}else if(document.querySelector("#text_message").style.color=="yellow"){
 			document.querySelector("#text_message").style.color="#a9ff00";
+			document.querySelector("#text_message").style.transform="scale(1.3)";
 		}else if(document.querySelector("#text_message").style.color="#a9ff00"){
 			document.querySelector("#text_message").style.color="red";
+			document.querySelector("#text_message").style.transform="scale(1.3)";
 		}
 	},300);
 }

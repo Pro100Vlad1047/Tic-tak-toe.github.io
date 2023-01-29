@@ -186,6 +186,8 @@ body {
           transform: translate(-50%, -50%);
   border-radius: 50%;
   background: orange;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 .wrapper .main_block .play_block .border_2 {
   position: absolute;
@@ -197,6 +199,8 @@ body {
           transform: translate(-50%, -50%);
   border-radius: 50%;
   background: orange;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 .wrapper .main_block .play_block .border_3 {
   position: absolute;
@@ -208,6 +212,8 @@ body {
           transform: translate(-50%, -50%);
   border-radius: 50%;
   background: orange;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 .wrapper .main_block .play_block .border_4 {
   position: absolute;
@@ -219,12 +225,17 @@ body {
           transform: translate(-50%, -50%);
   border-radius: 50%;
   background: orange;
+  -webkit-transition: 0.3s all;
+  transition: 0.3s all;
 }
 .wrapper .main_block .play_block .red {
   background: red;
 }
 .wrapper .main_block .play_block .white {
   background: white;
+}
+.wrapper .main_block .play_block .green {
+  background: limegreen;
 }
 .wrapper .main_block .play_block .plates {
   position: relative;
